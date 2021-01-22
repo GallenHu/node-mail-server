@@ -50,3 +50,18 @@ with body:
   "title": "hello"
 }
 ```
+
+## Docker
+
+```
+docker run -p 3000:3000 \
+  --env MAIL_HOST=smtp.office365.com \
+  --env MAIL_PORT=587 \
+  --env MAIL_USER=abc@example.com \
+  --env MAIL_PASSWORD=xxx \
+  --env AUTH_NAME=name \
+  --env AUTH_PASS=pass \
+  --dns 8.8.8.8 \
+  --name="node-mail-server" \
+  -d node-mail-server
+```
