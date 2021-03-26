@@ -1,0 +1,19 @@
+version: "3"
+services:
+  mail:
+    image: hvanke/node-mail-server
+    container_name: mail-server
+    environment:
+      - MAIL_HOST=smtp.office365.com
+      - MAIL_PORT=587
+      - MAIL_USER=abc@example.com
+      - MAIL_PASSWORD=xxx
+      - AUTH_NAME=name
+      - AUTH_PASS=pass
+      - TZ=Asia/Shanghai
+    dns:
+      - 8.8.8.8
+      - 4.4.4.4
+    ports:
+      - '3000:3000'
+    restart: always

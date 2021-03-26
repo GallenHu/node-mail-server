@@ -19,8 +19,10 @@ export AUTH_PASS=password
 yarn serve
 
 # test
-# curl -X POST (-H "Authorization: basic dGo6dG9iaQ==") -d '$Options' http://localhost:3000/v1/sendmail
 curl -X POST -d 'to=example@example.com&content=<b>hello world</b>' http://localhost:3000/v1/sendmail
+
+# with auth
+curl -X POST -H "Authorization: basic dGo6dG9iaQ==" -d '$Options' http://localhost:3000/v1/sendmail
 ```
 
 ## Options
@@ -65,3 +67,5 @@ docker run -p 3000:3000 \
   --name="node-mail-server" \
   -d node-mail-server
 ```
+
+[docker-compose.yml](./docker-compose.yml)
