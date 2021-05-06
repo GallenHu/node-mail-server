@@ -6,9 +6,9 @@ module.exports = () => {
       return "*"
     },
     exposeHeaders: ['WWW-Authenticate', 'Server-Authorization'],
-    maxAge: 5,
+    maxAge: 3600,
     credentials: true,
-    allowMethods: ['GET', 'POST', 'DELETE'],
-    allowHeaders: ['Content-Type', 'Authorization', 'Accept']
+    // allowMethods: ['GET', 'POST', 'DELETE'],
+    // allowHeaders: ['Content-Type', 'Authorization', 'Accept']
   })
 }
