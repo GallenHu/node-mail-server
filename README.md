@@ -47,10 +47,10 @@ http://localhost:3000/v1/sendmail
 with body:
 
 ```
-{
-  "to": "abc@gmail.com",
-  "title": "hello"
-}
+curl -X POST \
+-H "Authorization: basic base64code" -H "Accept: application/json" -H "Content-Type: application/json" \
+-d '{"to": "your@mail.com", "title": "my-title", "content": "my content"}' \
+http://localhost:3000/v1/sendmail
 ```
 
 ## Docker
